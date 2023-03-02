@@ -69,5 +69,20 @@ public class ProductoRepoImpl implements IProductoRepo{
 		return myQuery.getSingleResult();
 	}
 
+	@Override
+	public Producto buscarNombre(String nombre) {
+		TypedQuery<Producto> myQuery=this.entityManager.createQuery("Select p from Producto p where p.nombre=:valor", Producto.class);
+		myQuery.setParameter("valor", nombre);
+		//System.out.println(myQuery.getResultList());
+		return myQuery.getSingleResult();
+	}
+
+	@Override
+	public List<Producto> buscarTodos() {
+		TypedQuery<Producto> myQuery=this.entityManager.createQuery("Select p from Producto p", Producto.class);
+		
+		return myQuery.getResultList();
+	}
+
 	
 }

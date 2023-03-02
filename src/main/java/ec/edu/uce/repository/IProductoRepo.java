@@ -15,5 +15,7 @@ public interface IProductoRepo {
 	
 	Producto buscarId(Integer id);
 	Producto buscarCodigo(Integer codigo);
+	Producto buscarNombre(String nombre);
+	List<Producto> buscarTodos();
 	
 }

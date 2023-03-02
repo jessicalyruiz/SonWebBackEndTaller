@@ -38,6 +38,9 @@ public class Producto {
 	private Integer stock;
 	
 	
+	@Column(name = "prod_categoria")
+	private String categoria;
+	
 	@Column(name = "prod_precio")
 	private BigDecimal precio;
 	
@@ -107,6 +110,18 @@ public class Producto {
 
 	
 	
+
+	public String getCategoria() {
+		return categoria;
+	}
+
+
+
+	public void setCategoria(String categoria) {
+		this.categoria = categoria;
+	}
+
+
 
 	public Integer getStock() {
 		return stock;

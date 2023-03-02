@@ -56,6 +56,9 @@ public class Pedido {
 	@DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
 	private LocalDateTime fecha;
 	
+	
+	@Column(name = "pedi_estado")
+	private String estado;
 
 	public Factura getFactura() {
 		return factura;
@@ -125,6 +128,14 @@ public class Pedido {
 	public String toString() {
 		return "Pedido [id=" + id + ", codigo=" + codigo + ", pagoTipo=" + pagoTipo + ", descuento=" + descuento
 				+ ", fecha=" + fecha + "]";
+	}
+
+	public String getEstado() {
+		return estado;
+	}
+
+	public void setEstado(String estado) {
+		this.estado = estado;
 	}
 
 	
